@@ -4,7 +4,7 @@ This is the basic User registration and login web application
 
 ## Development server
 
-Run `node serve` for a dev server. Navigate to `http://localhost:4200/`.
+Run `node server` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Code scaffolding
 
