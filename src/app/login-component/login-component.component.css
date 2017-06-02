@@ -1,0 +1,35 @@
+.login-form {
+  width: 400px;
+  height: 400px;
+}
+
+.login-full-width {
+  width: 100%;
+}
+h2{
+  color: #283593;
+  text-align: center;
+}
+
+/*Login and Register User code starts*/
+md-card {
+	margin: 7% auto;
+	padding: 2em 2em 2em 2em;
+}
+button{
+  width:100px;
+  height:40px;
+  background-color: #283593;
+  color: #ffffff;
+  margin-top: 30px;
+  float: right;
+}
+button:focus{
+  border: none;
+}
+input{
+  margin-top: 30px;
+}
+md-input-container{
+  width:330px;
+}

@@ -1,0 +1,27 @@
+/*.appHeader{
+  background-color: #283593;
+  color: #ffffff;
+}
+h2{
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hoevr{
+  text-decoration: none;
+  color: inherit;
+}
+.login{
+  font-size: 18px;
+  float: right;
+  padding-top: 30px;
+}*/
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
