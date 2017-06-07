@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -33,7 +34,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     HomeComponent,
     DashboardComponent,
     UsersListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

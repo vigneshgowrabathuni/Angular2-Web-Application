@@ -42,29 +42,4 @@ export class LoginComponent implements OnInit {
       }
     });
   }
-//  user: Array<{eMail: string, password: string}>;
-//   checkCred(eMail,pwd){
-//
-//     console.log("Hi Vignesh");
-//
-//     if(eMail == this.user[0].eMail && pwd == this.user[0].password){
-//       this.router.navigateByUrl('/dashboard');
-//     }else{
-//       swal(
-//   'Oops...',
-//   'Something went wrong!',
-//   'error'
-// )
-//     }
-//
-//
-//   }
-//   constructor(private router: Router, private _userService: UserService) { }
-//
-//
-//
-//   ngOnInit() {
-//     this._userService.getUsers()
-//       .subscribe(resUserData => this.user = resUserData);
-//   }
 }

@@ -50,13 +50,26 @@ router.post('/user',function(req,res){
   newUser.eMail = req.body.eMail;
   newUser.password = req.body.password;
   newUser.userType = req.body.userType;
-  newUser.save(function(err, user){
+  usersDB.findOne({eMail:req.body.eMail})
+  .exec(function(err, user){
     if(err){
-      console.log('Error while saving user');
+      console.log('Error while retrieving users');
     }else{
-      res.json(user);
+      console.log(user);
+      if(user == null){
+        newUser.save(function(err, user){
+          if(err){
+            console.log('Error while saving user');
+          }else{
+            res.send(true);
+          }
+        });
+      }else {
+        res.send(false);
+      }
     }
   });
+
 });
 
 router.put('/user/:id', function(req,res){

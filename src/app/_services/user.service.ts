@@ -10,7 +10,8 @@ import { User } from '../_models/index';
 export class UserService {
   private _getUrl = "/api/users";
   private _getUser = "/api/user";
-
+  private _postUser = "/api/user";
+  loggedin = localStorage.getItem('loggedin');
   loginUser = localStorage.getItem('lUser');
 
   constructor(private _http:Http, private authenticationService: AuthenticationService) { }
@@ -25,6 +26,12 @@ export class UserService {
   }
   getUser(){
     this._http.get(this._getUser)
+    .map((response: Response) => response.json());
+  }
+  addUser(user){
+    let headers = new Headers({ 'Content-Type':'application/json' });
+    let options = new RequestOptions({ headers: headers});
+    return this._http.post(this._postUser, JSON.stringify(user),options)
     .map((response: Response) => response.json());
   }
 }

@@ -1,0 +1,40 @@
+<md-card class="register-form">
+  <h2>Register</h2>
+  <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !userName.valid }">
+      <md-input-container >
+        <input mdInput placeholder="Name" name="userName" [(ngModel)]="model.userName" #userName="ngModel" required>
+      </md-input-container>
+
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !eMail.valid }">
+      <md-input-container >
+        <input mdInput placeholder="Email ID" type="email" name="eMail" [(ngModel)]="model.eMail" #eMail="ngModel" required>
+        <!-- <div *ngIf="f.submitted && !eMail.valid" class="help-block">EMail ID is required</div> -->
+      </md-input-container>
+
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+      <md-input-container >
+        <input mdInput placeholder="Password" type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+        <!-- <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div> -->
+      </md-input-container>
+
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+      <md-input-container >
+        <input mdInput placeholder="Confirm Password" type="password" name="cpassword" [(ngModel)]="model.cpassword" #cpassword="ngModel" required>
+        <!-- <div *ngIf="f.submitted && !cpassword.valid" class="help-block">Password is required</div> -->
+      </md-input-container>
+
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
+</md-card>
