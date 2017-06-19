@@ -16,13 +16,25 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto:900,900italic,500,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
-
-
-
-
 </head>
 <body>
   <app-root>Loading...</app-root>
-  
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+  // !important: You want to give this variable(var googleLoaded = false;). This is used to run multiple chart in your jade.
+  var googleLoaded = false;
+  // !important: Define which chart packages to preload.Because this package uses ChartWrappers you can use any chart type that Google supports, but if it // isn't loaded it will load it on demand.
+  var googleChartsPackagesToLoad = ['geochart'];
+  </script>
+  <!-- <script type="text/javascript">
+  (function() {
+  var p = document.createElement('script');
+  p.type = 'text/javascript';
+  p.async = true;
+  p.src = 'https://apis.google.com/js/client.js?onload=onLoadFunction';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(p,s);
+})();
+</script> -->
 </body>
 </html>

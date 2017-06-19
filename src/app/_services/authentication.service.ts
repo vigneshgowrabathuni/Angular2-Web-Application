@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/operator/map'
 
 @Injectable()
 export class AuthenticationService {
     public token: string;
-
+    myLoginVal = false;
     constructor(private http: Http) {
         // set token if saved in local storage
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -31,7 +31,8 @@ export class AuthenticationService {
                     // store username and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify({ eMail: eMail, token: token, userName: uName }));
                     localStorage.setItem('lUser', uName);
-                    localStorage.setItem('loggedin', 'true');
+                    // localStorage.setItem('loggedIn', 'true');
+                    this.myLoginVal = true;
                     console.log(token);
                     // return true to indicate successful login
                     return true;
@@ -43,11 +44,23 @@ export class AuthenticationService {
 
     }
 
+    isLoggedIn(): boolean{
+      if(this.myLoginVal == true){
+        return true;
+      }else{
+        return false;
+      }
+      // console.log("Au service");
+      // console.log(this.myLoginVal);
+      // return this.myLoginVal;
+    }
+
     logout(): void {
         // clear token remove user from local storage to log user out
         console.log(this.token);
         this.token = null;
+        this.myLoginVal = false;
         localStorage.removeItem('currentUser');
-        localStorage.removeItem('loggedin');
+        // localStorage.setItem('loggedIn','false');
     }
 }

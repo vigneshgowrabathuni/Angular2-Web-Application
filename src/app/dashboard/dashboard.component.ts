@@ -9,11 +9,26 @@ import { Component, OnInit } from '@angular/core';
   providers: [UserService]
 })
 export class DashboardComponent implements OnInit {
-  users: Array<User>;
-  constructor(private _userService: UserService) { }
 
-  ngOnInit() {
-    this._userService.getUsers()
+  public myName = "Vignesh";
+  users: Array<User>;
+  public pie_ChartData = [
+    ['Task', 'Hours per Day'],
+    ['Work', 11],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Watch TV', 2],
+    ['Sleep', 7],
+    ['Code', 7]];
+  public pie_ChartOptions = {
+    title: 'My Daily Activities',
+    width: 800,
+    height: 400
+  };
+    constructor(private _userService: UserService) { }
+
+    ngOnInit() {
+      this._userService.getUsers()
       .subscribe(resUserData => this.users = resUserData);
+    }
   }
-}

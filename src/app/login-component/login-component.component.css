@@ -1,6 +1,6 @@
 .login-form {
   width: 400px;
-  height: 400px;
+  height: 450px;
 }
 
 .login-full-width {
@@ -13,18 +13,18 @@ h2{
 
 /*Login and Register User code starts*/
 md-card {
-	margin: 7% auto;
+	margin: 5% auto;
 	padding: 2em 2em 2em 2em;
 }
-button{
+.lBtn{
   width:100px;
   height:40px;
   background-color: #283593;
   color: #ffffff;
-  margin-top: 30px;
-  float: right;
+  margin-top: 10px;
+  margin-left: 120px;
 }
-button:focus{
+.lBtn:focus{
   border: none;
 }
 input{
@@ -32,4 +32,8 @@ input{
 }
 md-input-container{
   width:330px;
+}
+.regFpwdSec{
+  margin-top: 20px;
+  text-align: center;
 }

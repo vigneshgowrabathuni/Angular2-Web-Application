@@ -1,6 +1,23 @@
 <md-toolbar color="primary">
   <span routerLink="/home" routerLinkActive="active">My Application</span>
   <span class="example-spacer"></span>
-  <span [hidden]="!_userService.loggedin" [routerLink]="['/login']">Logout</span>
-  <div [hidden]="_userService.loggedin"><span [routerLink]="['/register']">Register</span></div>
+  <button md-icon-button [mdMenuTriggerFor]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item [hidden]="!logVal" [routerLink]="['/home']">
+      <md-icon>account_circle</md-icon>
+      <span>My Account</span>
+    </button>
+    <button class=" md-dark" md-menu-item [hidden]="!logVal" [routerLink]="['/login']">
+      <md-icon>logout</md-icon>
+      <span>Logout</span>
+    </button>
+    <button md-menu-item [hidden]="logVal" [routerLink]="['/register']">
+      <md-icon>assignment_ind</md-icon>
+      <span>Register</span>
+    </button>
+  </md-menu>
+  <!-- <span [hidden]="!logVal" [routerLink]="['/login']">Logout</span> -->
+  <!-- <div [hidden]="logVal"><span [routerLink]="['/register']">Register</span></div> -->
 </md-toolbar>

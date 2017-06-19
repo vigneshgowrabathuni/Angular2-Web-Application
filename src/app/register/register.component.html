@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <md-card class="register-form">
   <h2>Register</h2>
   <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
@@ -33,8 +34,12 @@
 
     </div>
 
-    <div class="form-group">
-      <button class="btn btn-primary">Sign Up</button>
+    <div>
+      <button  class="btn btn-primary signUpBtn">Sign Up</button>
+    </div>
+    <div class="regFpwdSec form-group">
+      <p>Have an account?&nbsp;<a [routerLink]="['/login']"><b>Sign In</b></a></p>
+      <p>Forgot your password?&nbsp;<a [routerLink]="['/register']"><b>Recover/Reset</b></a></p>
     </div>
   </form>
 </md-card>

@@ -1,0 +1,10 @@
+.app-content {
+  padding: 20px;
+}
+.app-content md-card {
+  margin: 20px;
+  height: 500px;
+}
+#pie_chart{
+  float: right;
+}

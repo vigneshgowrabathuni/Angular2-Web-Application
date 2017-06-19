@@ -7,6 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 // used to create fake backend
 // import { fakeBackendProvider } from './_helpers/index';
@@ -23,19 +24,22 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { RegisterComponent } from './register/register.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    GoogleChart,
     LoginComponent,
     NavbarComponent,
     HomeComponent,
     DashboardComponent,
     UsersListComponent,
     UserDetailComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

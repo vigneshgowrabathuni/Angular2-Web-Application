@@ -1,19 +1,19 @@
 
 md-card {
-	margin: 7% auto;
+	margin: 5% auto;
 	padding: 2em 2em 2em 2em;
   width: 400px;
-  height: 600px;
+  height: 650px;
 }
-button{
+.signUpBtn{
   width:100px;
   height:40px;
   background-color: #283593;
   color: #ffffff;
-  margin-top: 30px;
-  float: right;
+  margin-top: 10px;
+  margin-left: 120px;
 }
-button:focus{
+.signUpBtn:focus{
   border: none;
 }
 input{
@@ -27,5 +27,9 @@ md-input-container{
 }
 h2{
   color: #283593;
+  text-align: center;
+}
+.regFpwdSec{
+  margin-top: 20px;
   text-align: center;
 }

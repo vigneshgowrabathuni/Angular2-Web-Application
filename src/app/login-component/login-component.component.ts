@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
     this.authenticationService.logout();
   }
   login(){
-    this.loading = true;
     this.authenticationService.login(
       this.model.eMail, this.model.password
     )
@@ -30,15 +29,14 @@ export class LoginComponent implements OnInit {
       console.log(result);
       if(result === true){
         //login succesful
+        // localStorage.setItem('loggedin', 'true');
         this.router.navigateByUrl('/dashboard');
-        // this.router.navigate['/dashboard'];
       }else{
         // login failed
-                    // this.error = 'email or password is incorrect';
-                    this.snackBar.open('Email ID or Password is Incorrect', 'Oops!', {
-  duration: 3000
-});
-                    this.loading = false;
+        this.snackBar.open('Email ID or Password is Incorrect', 'Oops!', {
+          duration: 3000
+        });
+        this.loading = false;
       }
     });
   }
