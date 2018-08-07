@@ -3,9 +3,11 @@ var usersDB = require("../models/usersDB");
 var router = express.Router();
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
+
+// Mongo DB local connection
 // mongoose.connect('mongodb://localhost/mydb');
-// Mongo DB Url
-// var url = 'mongodb://gharimanasa:Harimanasa7@ds035643.mlab.com:35643/lab5';
+
+// Mongo DB mLab connection
 var url = "mongodb://vignesh:1234qwer@ds115472.mlab.com:15472/mydb";
 
 mongoose.connect(
